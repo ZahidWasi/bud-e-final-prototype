@@ -1,0 +1,135 @@
+<USER_REQUEST>
+ROLE & MISSION
+
+You are BUILDING a real, production-ready website called BUD-E in the
+current project folder. This is not a plan, not a mockup, not
+pseudocode. Write actual files, run the code, fix what breaks. If
+unsure whether to write code or describe it, WRITE CODE.
+
+The full BUD-E specification, palette, animation rules, logo rules,
+and all attached data files (calibration questions, YouTube links,
+question bank, short notes, logo image) are the source of truth.
+Follow them exactly. Do not paraphrase, shorten, or "improve" any
+question, answer, hint, solution, chapter name, video link, or copy
+line. If a value is missing, show a placeholder and flag it — do not
+invent one.
+
+ANTI-DRIFT RULES
+- No TODOs, no placeholders, no "// implement later", no
+  "... rest unchanged". Every file complete.
+- After every phase, the project must install, build, and run.
+- Do not proceed to the next phase until I say "Proceed to Phase N".
+- If you cannot write to a filesystem, output each file as a
+  complete copy-pasteable code block with its filename as header.
+- If the spec is ambiguous, pick the most reasonable interpretation,
+  implement it, and note the assumption in a short comment.
+
+TECH STACK
+- Plain HTML + CSS + vanilla JS (no framework needed for this build).
+- Palette tokens as CSS variables using the exact hex codes from the
+  master prompt. No substitutions.
+- All data (curriculum, calibration, videos, question bank, short
+  notes) as JS files under js/data/.
+- Google Forms endpoint for logging, read from env vars.
+- Deploy target: Vercel static hosting.
+
+BUILD IN THESE 10 PHASES, IN ORDER. After each phase, output a short
+Phase Completion Report (files created, commands run, known issues),
+then STOP and wait for my "Proceed to Phase N".
+
+Phase 1 — Read all attached files. Output a numbered feature
+checklist, data model list, external integrations, and any
+ambiguities. No code. Confirm which data files you can read and
+how many questions/chapters you found in each.
+
+Phase 2 — Scaffold the project: index.html, css/styles.css with
+palette tokens as CSS variables, js/data/ files parsed from the
+attachments, js/app.js stub, assets/logo.png, vercel.json with
+{ "cleanUrls": true }, .env.example. Runnable locally with no
+console errors.
+
+Phase 3 — Homepage. Build every section from the master prompt
+exactly: navbar with 40px logo, hero with 96px logo above headline,
+The Problem BUD-E Solves with 3 gaps, 5-Stage Sprint Flow, Proof of
+Learning preview, feedback box, footer with "Crafted by Zahid Wasi"
+at the very bottom. Apply palette and animation rules exactly.
+
+Phase 4 — Onboarding form (name, subject, dependent chapter
+dropdown, time budget pills, parent WhatsApp) + Google Form logging
+via env vars. Silent POST, no UI blocking, try/catch with
+console.warn on failure.
+
+Phase 5 — Stage 1 Calibrate. 10 MCQs from js/data/calibration.js
+for selected chapter. Score → Foundation (0-4) / Intermediate (5-7)
+/ Advanced (8-10). Show level badge using level colors. Log level
+back to the Google Form.
+
+Phase 6 — Stage 2 Learn. Look up correct YouTube link from
+js/data/videos.js by subject + chapter + level + time. Responsive
+16:9 iframe, lazy-loaded. "Video unavailable" if missing. Skip
+button to jump to Practice.
+
+Phase 7 — Stage 3 Practice. Question count by level + time as
+specified in master prompt. Load correct set from
+js/data/practice_bank.js. Per question: MCQ options, View Hint
+button, after attempt ask "silly mistake / concept gap / guess?" if
+wrong, View Solution button only after attempt. Confidence meter
+updates per the rules. Track error breakdown.
+
+Phase 8 — Stage 4 Test. 10 random moderate-to-difficult MCQs per
+chapter, same for all students. Timed, no hints, auto-submit on
+timeout. Score + review after.
+
+Phase 9 — Result page + Proof of Learning card. Error breakdown,
+confidence meter, test score, screenshot-ready card with date,
+topic, time, score, Can Solve badge (≥7/10), BUD-E branding. Log
+completed sprint to Google Form.
+
+Phase 10 — Stage 5 Recall. Short notes for the chapter from
+js/data/short_notes.js. Fallback to Electric Charges and Fields
+notes if missing. Flashcards with 400ms rotateY flip, reduced-motion
+safe.
+
+Phase 11 — Break system. Timer from sprint start. Every 45 min:
+popup "Take a 10-minute break?" Yes pauses sprint, starts 15-min
+countdown, shows "To resume, click here". At 10 min no return:
+gentle reminder warning parents will be notified. At 15 min no
+return: WhatsApp message to saved parent number via Twilio or Meta
+Cloud API (env vars). Timers must survive tab backgrounding using
+visibilitychange + Date.now().
+
+Phase 12 — Wire feedback box to the same Google Form (feedback
+entry). Confirm footer signature, palette match, animation timing,
+reduced-motion coverage, and logo placement.
+
+Phase 13 — Full data audit. Re-read every data file. Output a
+coverage table: chapters per subject, calibration questions per
+chapter, practice questions per level/time, video links per
+combination. Flag any gaps. No fixes.
+
+Phase 14 — Fix every issue found in Phase 13. Re-verify. Run
+Lighthouse, confirm ≥ 90 on all four categories. No console errors.
+No horizontal scroll at 320px–1920px. Keyboard navigable.
+
+Phase 15 — Final verification. Fresh install → run → walk through
+the entire sprint on desktop and mobile. Trigger the break flow.
+Submit feedback and a sprint. Screenshot the Proof of Learning
+card. Output a Final Verification Report with SHIP / DO NOT SHIP.
+If anything fails, return to Phase 14 — do not declare done.
+
+BEGIN WITH PHASE 1 NOW. Output only the Phase 1 analysis, then stop
+and wait for my "Proceed to Phase 2".
+
+--- MASTER PROMPT AND DATA FILES BELOW ---
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-07T22:42:20+05:30.
+
+The user has uploaded 1 image(s):
+- C:/Users/ZAHID WASI/.gemini/antigravity/brain/581c3b0e-0f90-4cdc-b3d2-eca95a2bcd8f/.user_uploaded/media_1791392711179.png
+You can embed this image in an artifact if you need the USER to review it.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

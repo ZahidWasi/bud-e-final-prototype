@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUD-E — 2-Hour Active Learning Sprint for Class 12 Boards</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo-wrap" onclick="window.location.reload()">
+        <span class="logo-badge">BUD-E</span>
+        <div class="logo-subtext">
+          <strong>Build · Understand · Drill · Evaluate</strong><br>
+          Your Active Learning Sprint Partner
+        </div>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="#why-bude" class="nav-link">The Problem</a>
+        <a href="#how-it-works" class="nav-link">5-Stage Sprint</a>
+        <a href="#start-sprint" class="btn btn-primary btn-sm">Start 2-Hour Sprint</a>
+        <a href="mailto:wasizahid1455@gmail.com?subject=BUD-E%20Feedback%20/%20Query" class="nav-link" style="color:var(--color-brand); font-weight:600;">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================== -->
+  <!-- HOMEPAGE VIEW -->
+  <!-- ========================================================== -->
+  <main id="homepage-view">
+
+    <!-- HERO SECTION -->
+    <section class="section-hero">
+      <div class="container hero-grid">
+        <div class="hero-left observe-enter">
+          <span class="pill pill-brand">Class 12 Boards & School Exams</span>
+          <h1 class="hero-title">
+            The one-shot teaches you the topic.<br>
+            <span class="text-brand">BUD-E makes sure you can solve it.</span>
+          </h1>
+          <p class="hero-subtitle">
+            A 2-hour active learning sprint (extendable up to 5+ hours) engineered specifically for Class 12 students in India. Turn late-night panic into proven exam confidence before tomorrow's paper.
+          </p>
+
+          <div class="hero-promise-box">
+            <div class="hero-promise-title">Core Promise</div>
+            <div class="hero-promise-text">
+              BUD-E is an add-on to the one-shot lecture, not a replacement. It takes you from <em>"I watched the topic"</em> to <em>"I can solve it"</em> in as little as 2 hours, with proof.
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+            <a href="#start-sprint" class="btn btn-primary" style="padding:12px 24px;">Start Your Sprint Now →</a>
+            <button id="btn-demo-break" class="btn btn-secondary btn-sm" title="Test the 45-min accountability break mechanism">
+              ⏱ Test Break System (Demo)
+            </button>
+          </div>
+        </div>
+
+        <!-- SPRINT SETUP CARD (ONBOARDING) -->
+        <div id="start-sprint" class="launcher-card observe-enter">
+          <span class="pill pill-accent" style="margin-bottom:0.75rem;">Step 0 · Personalize Your Sprint</span>
+          <h3 style="margin-bottom:0.4rem; font-size:1.35rem;">Launch Learning Sprint</h3>
+          <p class="text-soft" style="font-size:0.85rem; margin-bottom:1.25rem;">
+            Configure your topic and dedicated time budget to calibrate your exact difficulty band.
+          </p>
+
+          <form id="sprint-launcher-form">
+            <!-- Student Name -->
+            <div class="form-group">
+              <label class="form-label" for="input-student-name">Your Full Name <span class="req">*</span></label>
+              <input type="text" id="input-student-name" class="form-input" placeholder="e.g., Rohan Gupta" required>
+            </div>
+
+            <!-- Subject Selection -->
+            <div class="form-group">
+              <label class="form-label" for="select-subject">Select Subject <span class="req">*</span></label>
+              <select id="select-subject" class="form-select" required></select>
+            </div>
+
+            <!-- Chapter Selection -->
+            <div class="form-group">
+              <label class="form-label" for="select-chapter">Select Chapter <span class="req">*</span></label>
+              <select id="select-chapter" class="form-select" required></select>
+            </div>
+
+            <!-- Dedicated Hours Selection -->
+            <div class="form-group">
+              <label class="form-label">Approximate Hours Dedicated <span class="req">*</span></label>
+              <div class="duration-pills">
+                <button type="button" class="duration-btn active" data-hours="2">2 hrs</button>
+                <button type="button" class="duration-btn" data-hours="3">3 hrs</button>
+                <button type="button" class="duration-btn" data-hours="4">4 hrs</button>
+                <button type="button" class="duration-btn" data-hours="5">5+ hrs</button>
+              </div>
+              <div class="helper-text">Calculates exact question quotas (15 to 45 questions).</div>
+            </div>
+
+            <!-- Parent WhatsApp Number -->
+            <div class="form-group">
+              <label class="form-label" for="input-parent-phone">Parent's WhatsApp Number <span class="req">*</span></label>
+              <input type="tel" id="input-parent-phone" class="form-input" placeholder="e.g., 9876543210" pattern="[0-9]{10}" required>
+              <div class="helper-text">
+                Accountability shield: Prompts 10-min rest every 45 mins. If you abandon study past 15 mins, an alert is dispatched.
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:12px;">
+              Enter Stage 1: Calibrate Now →
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PROBLEM SECTION -->
+    <section id="why-bude" class="section">
+      <div class="container">
+        <div style="max-width:760px; margin:0 auto; text-align:center;" class="observe-enter">
+          <span class="pill pill-brand">The Reality of Board Prep</span>
+          <h2 style="font-size:2.2rem; margin-top:0.75rem; margin-bottom:1rem;">The Problem BUD-E Solves</h2>
+          <p style="font-size:1.1rem; color:var(--color-ink-soft); line-height:1.6;">
+            Every year, lakhs of students watch 5–6 hour one-shot lectures the night before their exam. They feel productive. They walk into the exam hall unable to solve problems independently.
+          </p>
+          <p style="font-size:1rem; color:var(--color-ink); margin-top:1rem; line-height:1.6;">
+            The reason is simple: <strong>watching is passive. Exams test active recall.</strong> A one-shot creates the illusion of learning — recognition without recall, familiarity without mastery. A student finishes a 6-hour video and has watched the topic, but never solved it.
+          </p>
+        </div>
+
+        <!-- 3 Specific Gaps -->
+        <div class="problem-grid">
+          <!-- Gap 1 -->
+          <div class="gap-card observe-enter">
+            <div class="gap-number">01</div>
+            <h3>Passive Watching</h3>
+            <p class="text-soft" style="font-size:0.95rem;">
+              Watching solutions solved by a teacher creates an illusion of competence. You understand it while watching like a movie, but can't solve it alone on blank paper.
+            </p>
+          </div>
+
+          <!-- Gap 2 -->
+          <div class="gap-card observe-enter">
+            <div class="gap-number">02</div>
+            <h3>No Diagnostic Calibration</h3>
+            <p class="text-soft" style="font-size:0.95rem;">
+              Studying basic theory when you already know it wastes your crucial night-before hours. You need targeted practice focused squarely on your actual weak spots.
+            </p>
+          </div>
+
+          <!-- Gap 3 -->
+          <div class="gap-card observe-enter">
+            <div class="gap-number">03</div>
+            <h3>Zero Accountability</h3>
+            <p class="text-soft" style="font-size:0.95rem;">
+              Getting distracted on Instagram or giving up halfway through leaves you unprepared and panicked for tomorrow's test. BUD-E keeps you on a strict pacing rhythm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-STAGE SPRINT FLOW SECTION -->
+    <section id="how-it-works" class="section" style="background-color:var(--color-paper-alt); border-top:1px solid var(--color-line); border-bottom:1px solid var(--color-line);">
+      <div class="container">
+        <div style="text-align:center; max-width:680px; margin:0 auto;" class="observe-enter">
+          <span class="pill pill-brand">Cognitive Progression</span>
+          <h2 style="font-size:2.2rem; margin-top:0.75rem; margin-bottom:0.75rem;">The 5-Stage Active Sprint Flow</h2>
+          <p class="text-soft" style="font-size:1.05rem;">
+            Every sprint follows a strict cognitive progression engineered specifically for Board exam retention.
+          </p>
+        </div>
+
+        <div class="stage-timeline">
+          <!-- Stage 1 -->
+          <div class="stage-step-card observe-enter">
+            <div class="stage-header">
+              <span class="pill pill-stage-calibrate">Stage 1</span>
+              <span class="stage-badge-dot dot-calibrate"></span>
+            </div>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Calibrate</h4>
+            <p class="text-soft" style="font-size:0.85rem; line-height:1.5;">
+              10 quick diagnostic questions to pinpoint your knowledge band (Foundation / Intermediate / Advanced).
+            </p>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="stage-step-card observe-enter">
+            <div class="stage-header">
+              <span class="pill pill-stage-learn">Stage 2</span>
+              <span class="stage-badge-dot dot-learn"></span>
+            </div>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Learn</h4>
+            <p class="text-soft" style="font-size:0.85rem; line-height:1.5;">
+              Targeted one-shot YouTube timestamps & key formulas tailored to your weak spots, with instant skip options.
+            </p>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="stage-step-card observe-enter">
+            <div class="stage-header">
+              <span class="pill pill-stage-practice">Stage 3</span>
+              <span class="stage-badge-dot dot-practice"></span>
+            </div>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Practice</h4>
+            <p class="text-soft" style="font-size:0.85rem; line-height:1.5;">
+              15–40 time-budgeted practice questions with confidence tagging & instant micro-explanations after error classification.
+            </p>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="stage-step-card observe-enter">
+            <div class="stage-header">
+              <span class="pill pill-stage-test">Stage 4</span>
+              <span class="stage-badge-dot dot-test"></span>
+            </div>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Test</h4>
+            <p class="text-soft" style="font-size:0.85rem; line-height:1.5;">
+              Timed exam simulation with zero hints to test true problem-solving mastery, generating your shareable Proof Card.
+            </p>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="stage-step-card observe-enter">
+            <div class="stage-header">
+              <span class="pill pill-stage-recall">Stage 5</span>
+              <span class="stage-badge-dot dot-recall"></span>
+            </div>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Recall</h4>
+            <p class="text-soft" style="font-size:0.85rem; line-height:1.5;">
+              High-yield 3D interactive flashcards & error-specific revision notes for crisp last-minute memorization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIDENCE METER & PROOF OF LEARNING HIGHLIGHT -->
+    <section class="section">
+      <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
+        <div class="observe-enter">
+          <span class="pill pill-accent">Proprietary Error Taxonomy</span>
+          <h2 style="font-size:2rem; margin-top:0.75rem; margin-bottom:1rem;">
+            Not Just Right or Wrong.<br>
+            <span class="text-brand">We Diagnose Why.</span>
+          </h2>
+          <p style="color:var(--color-ink-soft); font-size:1rem; line-height:1.6; margin-bottom:1.25rem;">
+            When you solve questions in BUD-E's Practice stage, every mistake prompts an instant reflection:
+            <br><strong>"Was this a silly mistake, a concept gap, or a guess?"</strong>
+          </p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; font-size:0.95rem;">
+            <li style="display:flex; align-items:center; gap:10px;">
+              <span style="width:12px; height:12px; border-radius:50%; background:var(--color-accent);"></span>
+              <span><strong>Silly Mistake:</strong> Minor calculation error — minor confidence deduction (-2%).</span>
+            </li>
+            <li style="display:flex; align-items:center; gap:10px;">
+              <span style="width:12px; height:12px; border-radius:50%; background:var(--color-danger);"></span>
+              <span><strong>Concept Gap:</strong> Underlying formula confusion — moderate deduction (-5%).</span>
+            </li>
+            <li style="display:flex; align-items:center; gap:10px;">
+              <span style="width:12px; height:12px; border-radius:50%; background:var(--color-ink-soft);"></span>
+              <span><strong>Guess:</strong> Unsure attempt — highest deduction (-8%) to enforce real mastery.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card observe-enter" style="border:2px solid var(--color-brand); text-align:center; padding:2rem;">
+          <div class="pill pill-brand" style="margin-bottom:0.75rem;">Screenshot-Ready Artifact</div>
+          <h3 style="font-size:1.4rem; margin-bottom:0.5rem;">The "Proof of Learning" Card</h3>
+          <p class="text-soft" style="font-size:0.9rem; margin-bottom:1.25rem;">
+            Walk into your exam hall with concrete evidence of problem-solving competence.
+          </p>
+          <div style="background:var(--color-paper); border-radius:var(--radius-card); padding:1.25rem; text-align:left; font-size:0.9rem; line-height:1.6;">
+            <div>✓ <strong>Student Name & Date of Sprint</strong></div>
+            <div>✓ <strong>Chapter & Exact Time Dedicated</strong></div>
+            <div>✓ <strong>Timed Test Mastery Score</strong></div>
+            <div>✓ <strong>Official "Verified: CAN SOLVE" Badge</strong></div>
+            <div>✓ <strong>BUD-E Anti-Passive Certification</strong></div>
+          </div>
+          <a href="#start-sprint" class="btn btn-primary" style="margin-top:1.5rem; width:100%;">
+            Start Your Sprint to Earn Your Badge →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================== -->
+  <!-- SPRINT ACTIVE WORKSPACE (SPA VIEW) -->
+  <!-- ========================================================== -->
+  <div id="sprint-workspace">
+    <!-- Active Sprint Sticky Sub-Nav -->
+    <div class="sprint-header">
+      <div class="container sprint-nav-bar">
+        <div class="sprint-info-badge">
+          <span class="logo-badge" style="font-size:0.9rem; padding:3px 8px;">BUD-E SPRINT</span>
+          <div>
+            <strong id="workspace-student-name" style="font-size:0.95rem; color:var(--color-ink);">Student</strong>
+            <span id="workspace-chapter-name" style="display:block; font-size:0.78rem; color:var(--color-ink-soft);">Topic</span>
+          </div>
+        </div>
+
+        <!-- Stages Progress Tracker -->
+        <div class="stage-indicators">
+          <button class="stage-step-btn current" data-stage="calibrate">1. Calibrate</button>
+          <button class="stage-step-btn" data-stage="learn">2. Learn</button>
+          <button class="stage-step-btn" data-stage="practice">3. Practice</button>
+          <button class="stage-step-btn" data-stage="test">4. Test</button>
+          <button class="stage-step-btn" data-stage="recall">5. Recall</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Stage Mount Container -->
+    <div class="container" style="padding-top:2rem; padding-bottom:3rem;">
+      <div id="stage-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- MODALS: ACCOUNTABILITY & BREAK SYSTEM -->
+  <!-- ========================================================== -->
+
+  <!-- Modal 1: 45-min Break Prompt -->
+  <div id="modal-break-prompt" class="modal-overlay">
+    <div class="modal-content modal-break-theme">
+      <span class="pill" style="background:#F2D9D6; color:#B54848; margin-bottom:0.75rem;">Accountability Pulse</span>
+      <h3 style="font-size:1.35rem; margin-bottom:0.5rem; color:var(--color-ink);">45 Minutes Completed!</h3>
+      <p style="font-size:0.95rem; color:var(--color-ink-soft); line-height:1.5; margin-bottom:1.5rem;">
+        Would you like to take a quick 10-minute mental break? Resting replenishes cognitive focus for problem solving.
+      </p>
+      <div style="display:flex; gap:10px;">
+        <button id="btn-break-yes" class="btn btn-primary" style="flex:1;">Yes, Take Break (10m)</button>
+        <button id="btn-break-no" class="btn btn-secondary" style="flex:1;">No, Continue Sprint</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Active Break Countdown Screen -->
+  <div id="modal-break-session" class="modal-overlay">
+    <div class="modal-content" style="text-align:center;">
+      <span class="pill pill-brand" style="margin-bottom:0.75rem;">Break Mode Active</span>
+      <h3 style="font-size:1.35rem; margin-bottom:0.25rem;">Step Away From The Screen</h3>
+      <p class="text-soft" style="font-size:0.85rem; margin-bottom:1.25rem;">
+        Relax your eyes, drink water, and prepare for the next practice round.
+      </p>
+
+      <div style="font-size:3.5rem; font-weight:700; font-family:monospace; color:var(--color-brand); margin-bottom:1rem;" id="break-countdown-timer">
+        15:00
+      </div>
+
+      <div id="break-warning-notice" style="display:none; background:var(--color-warning-tint); color:#8E3939; padding:10px; border-radius:var(--radius-btn); font-size:0.85rem; margin-bottom:1.25rem;"></div>
+
+      <button id="btn-resume-sprint" class="btn btn-accent" style="width:100%; padding:12px; font-size:1rem;">
+        Click Here To Resume Learning Sprint →
+      </button>
+      <div class="helper-text" style="margin-top:0.5rem;">
+        Clicking notifies BUD-E that you have safely returned to your desk.
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- FOOTER -->
+  <!-- ========================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">BUD-E — Build · Understand · Drill · Evaluate</div>
+          <p class="footer-tagline">
+            The add-on to your one-shot lecture. Transform passive viewing into exam problem-solving mastery.
+          </p>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+          <button id="btn-download-logs" class="btn btn-secondary btn-sm" title="Download the human-readable user sprint ledger">
+            📥 Download Sprint Records (sprint_records.txt)
+          </button>
+          <a href="mailto:wasizahid1455@gmail.com?subject=BUD-E%20Bug%20Report%20/%20Feedback" class="btn btn-primary btn-sm">
+            Contact Us (Email)
+          </a>
+        </div>
+      </div>
+
+      <!-- VERY BOTTOM SIGNATURE -->
+      <div class="footer-signature">
+        Crafted by Zahid Wasi
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data/curriculum.js"></script>
+  <script src="js/data/videos.js"></script>
+  <script src="js/data/calibration.js"></script>
+  <script src="js/data/short_notes.js"></script>
+  <script src="js/data/practice_bank.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
